@@ -1,7 +1,6 @@
 #!/bin/bash
 
-INVOKE_URL=https://xxxxxxx.amazonaws.com
-
+INVOKE_URL=https://rekdm1llc6.execute-api.us-east-1.amazonaws.com
 # add movies
 echo "> add movies"
 for i in $(seq 2001 2003); do

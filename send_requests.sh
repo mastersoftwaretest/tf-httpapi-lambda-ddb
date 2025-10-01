@@ -1,9 +1,9 @@
 #!/bin/bash
 
-INVOKE_URL=https://rekdm1llc6.execute-api.us-east-1.amazonaws.com
+INVOKE_URL=https://2bwai0wada.execute-api.us-east-1.amazonaws.com
 # add movies
 echo "> add movies"
-for i in $(seq 2001 2003); do
+for i in $(seq 2000 2003); do
     json="$(jq -n --arg year "$i" --arg title "MovieTitle$i" '{year: $year, title: $title}')"
     curl \
         -X PUT \
@@ -15,7 +15,7 @@ done
 
 # get movies by year
 echo "> get movies by year"
-for i in $(seq 2001 2003); do
+for i in $(seq 2000 2003); do
     curl "$INVOKE_URL/topmovies/$i"
     echo
 done
